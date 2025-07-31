@@ -25,7 +25,7 @@ class BookingController extends Controller
 
     public function store(Request $request)
     {
-        $this->authorize('create', Booking::class); // ⬅️ Add this
+        $this->authorize('create', Booking::class); 
 
         $validator = Validator::make($request->all(), [
             'service_id' => 'required|exists:services,id',
