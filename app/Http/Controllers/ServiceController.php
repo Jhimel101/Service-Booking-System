@@ -15,10 +15,6 @@ class ServiceController extends Controller
 
     public function index()
     {
-        // Get only active services (if status field exists)
-        // return response()->json(Service::where('status', true)->get());
-
-        // Or if you want all services:
         return response()->json(Service::all());
     }
 
